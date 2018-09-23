@@ -9,7 +9,7 @@ class Conductor extends Model
     protected $table='conductor';
 
     protected $primaryKey='rut';
-
+    protected $casts = ["rut"=>"string"];
     public $timestamps=false;
 
     protected $fillable =[
@@ -17,7 +17,6 @@ class Conductor extends Model
     	'nombre_conductor',
     	'email_conductor',
     	'telefono',
-        'condicion'
     ];
 
     protected $guarded =[

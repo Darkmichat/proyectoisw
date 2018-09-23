@@ -15,9 +15,9 @@
 
 			{!!Form::open(array('url'=>'proyecto/conductor','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
-            <div class="form-group">
+            <div class="form-group"> 
             	<label for="rut">Rut</label>
-            	<input type="text" name="rut" class="form-control" placeholder="Ej: 123456789">
+            	<input id="rut" type="text" name="rut"  class="form-control" placeholder="Ej: 123456789">
             </div>
             <div class="form-group">
             	<label for="nombre_conductor">Nombre del conductor</label>

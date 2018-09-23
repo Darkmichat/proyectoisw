@@ -47,7 +47,6 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <small class="bg-red">Online</small>
-                  <span class="hidden-xs">Nicolas Novoa Reyes</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -60,7 +59,7 @@
                   <li class="user-footer">
                     
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Cerrar</a>
+                      <a href="{{url('/logout')}}" class="btn btn-default btn-flat">Cerrar sesión </a>
                     </div>
                   </li>
                 </ul>
@@ -84,26 +83,31 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>Almacén</span>
+                <span>Gestion</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i> Artículos</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                <li><a href="conductor"><i class="fa fa-circle-o"></i> Conductor</a></li>
+                <li><a href="vehiculo"><i class="fa fa-circle-o"></i> Vehiculos</a></li>
+                <li><a href="neumatico"><i class="fa fa-circle-o"></i> Neumaticos</a></li>
+              </ul>
+            </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Asignar</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="asignado"><i class="fa fa-circle-o"></i>Conductor-Vehiculos</a></li>
+                <li><a href="posee"><i class="fa fa-circle-o"></i>Vehiculos-Neumaticos</a></li>
+                <li><a href="registra"><i class="fa fa-circle-o"></i>Ficha</a></li>
               </ul>
             </li>
             
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-th"></i>
-                <span>Compras</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="compras/ingreso"><i class="fa fa-circle-o"></i> Ingresos</a></li>
-                <li><a href="compras/proveedor"><i class="fa fa-circle-o"></i> Proveedores</a></li>
-              </ul>
-            </li>
+            
+
               <ul class="treeview-menu">
                 <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
                 
@@ -165,6 +169,14 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('js/app.min.js')}}"></script>
-    
+    <script src="{{asset('js/rut.js')}}"></script>
+    <script type="text/javascript">
+
+
+  $(function(){
+      $("#rut").rut({formatOn: 'keyup'});
+  }
+  );
+</script>
   </body>
 </html>

@@ -8,18 +8,15 @@ class Vehiculo extends Model
 {
     protected $table='vehiculo';
 
-    protected $primaryKey='patente';
+    protected $primaryKey='id_vehiculo';
 
     public $timestamps=false;
 
     protected $fillable =[
         'patente',
-        'rut',
     	'marca',
         'tipo',
-    	'modelo',
-    	'imagen',
-        'estado'
+    	'modelo'
     ];
 
     protected $guarded =[

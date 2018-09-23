@@ -24,12 +24,10 @@ class VehiculoFormRequest extends Request
     public function rules()
     {
         return [
-            'patente'=>'required|max:14',
-            'rut'=>'required|max:14',
-            'marca'=>'max:50',
-            'tipo'=>'max:50',
-            'modelo'=>'max:20',
-            'imagen'=> 'mimes:jpg,bmp,png'
+            'patente'=>'required|max:7',
+            'marca'=>'required|max:50',
+            'tipo'=>'required|max:50',
+            'modelo'=>'required|max:20',
         ];
     }
 }

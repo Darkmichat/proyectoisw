@@ -24,10 +24,10 @@ class ConductorFormRequest extends Request
     public function rules()
     {
         return [
-            'rut'=>'required|max:50',
-            'nombre_conductor'=>'max:50',
-            'email_conductor'=>'max:20',
-            'telefono'=>'max:20',
+            'rut'=>'required|max:30',
+            'nombre_conductor'=>'required|alpha',
+            'email_conductor'=>'required|max:20',
+            'telefono'=>'required|max:20',
         ];
     }
 }

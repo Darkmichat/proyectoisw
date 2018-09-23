@@ -14,29 +14,23 @@
 		<div class="table-responsive">
 			<table class="table table-stripped table-bordered table-condensed table-hover">
 				<thead>
+					<th>Id</th>
 					<th>Patente</th>
 					<th>Marca</th>
 					<th>Tipo</th>
 					<th>Modelo</th>
-					<th>Nombre conductor</th>
-					<th>Imagen</th>
-					<th>Estado</th>
 					<th>Opciones</th>
 				</thead>
 				@foreach ($vehiculos as $veh)
 				<tr>
+					<td>{{ $veh->id_vehiculo}}</td>
 					<td>{{ $veh->patente}}</td>
 					<td>{{ $veh->marca}}</td>
 					<td>{{ $veh->tipo}}</td>
 					<td>{{ $veh->modelo}}</td>
-					<td>{{ $veh->conductor}}</td>
-					<td>{{ $veh->estado}}</td>
-					<td>
-						<img src="{{asset('imagenes/vehiculos/'.$veh->imagen)}}" alt="{{ $veh->marca}}" height="100px" width="150px" class="img-tumbnail">
-					</td>
 
 					<td>
-						<a href="{{URL::action('VehiculoController@edit',$veh->patente)}}"><button class="btn btn-info">Editar</button></a>
+						<a href="{{URL::action('VehiculoController@edit',$veh->id_vehiculo)}}"><button class="btn btn-info">Editar</button></a>
 						 <a href="" data-target="#modal-delete-{{$veh->patente}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
 					</td>
 				</tr>
